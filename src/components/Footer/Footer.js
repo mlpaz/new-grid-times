@@ -178,9 +178,9 @@ const MainNavArea = styled.div`
     flex-wrap: wrap;
     align-content: start;
     text-align: left;
-  }
-  nav {
-    flex: 1 1 200px;
+    nav {
+      flex: 1 1 200px;
+    }
   }
 `;
 

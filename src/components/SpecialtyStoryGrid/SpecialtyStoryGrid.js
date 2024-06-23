@@ -78,11 +78,13 @@ const MarketCards = styled.div`
 `;
 
 const SportsSection = styled.section`
-  margin-left: 16px;
   grid-area: sports;
   display: grid;
   gap: 16px;
   grid-template-rows: 32x 1fr;
+  @media ${QUERIES.desktopAndUp} {
+    margin-left: 16px;
+  }
 `;
 
 const SportsStories = styled.div`
