@@ -27,7 +27,7 @@ const Wrapper = styled.article`
       "image"
       "heading"
       "abstract";
-    grid-template-columns: 252px 1fr;
+    grid-template-columns: 1fr;
     gap: 8px 0px;
   }
 `;
@@ -51,7 +51,7 @@ const Heading = styled.h2`
 `;
 
 const Abstract = styled.p`
-  margin-bottom: 10px;
+  align-self: start;
   grid-area: abstract;
   font-size: 1rem;
   white-space: pre-wrap;

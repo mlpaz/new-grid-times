@@ -118,6 +118,7 @@ const OpinionStoryList = styled.div`
 `;
 
 const OpinionSection = styled.section`
+  margin-top: -8px;
   @media ${QUERIES.desktopAndUp} {
     padding-left: 16px;
     margin-bottom: 16px;

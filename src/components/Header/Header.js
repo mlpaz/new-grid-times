@@ -52,14 +52,18 @@ const SubscribeQuestion = styled.a`
   text-align: center;
   font-style: italic;
   text-decoration: underline;
+  position: absolute;
+  margin-top: 8px;
+  width: 100%;
 `;
 
 const SubscribeWrapeer = styled.div`
-  flex-direction: column;
-  gap: 8px;
   display: none;
-  @media ${QUERIES.desktopAndUp} {
-    display: flex;
+  @media ${QUERIES.laptopAndUp} {
+    display: revert;
+    justify-self: end;
+    flex-direction: column;
+    position: relative;
   }
 `;
 
@@ -67,7 +71,7 @@ const SuperHeader = styled.div`
   padding: 16px 0;
   background: var(--color-gray-900);
   color: white;
-  @media ${QUERIES.desktopAndUp} {
+  @media ${QUERIES.laptopAndUp} {
     display: none;
   }
 `;
@@ -92,19 +96,27 @@ const ActionGroup = styled.div`
 
 const DesktopActionGroup = styled(ActionGroup)`
   display: none;
-  @media ${QUERIES.desktopAndUp} {
+  @media ${QUERIES.laptopAndUp} {
     display: flex;
   }
 `;
 
 const MainHeader = styled(MaxWidthWrapper)`
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
   margin-top: 32px;
   margin-bottom: 48px;
-  @media ${QUERIES.desktopAndUp} {
-    justify-content: space-between;
+  @media ${QUERIES.tabletOnly} {
+    margin-top: 48px;
+    margin-bottom: 72px;
+  }
+  @media ${QUERIES.laptopAndUp} {
+    justify-items: start;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    margin-top: 16px;
+    margin-bottom: 72px;
   }
 `;
 

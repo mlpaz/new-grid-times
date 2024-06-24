@@ -46,53 +46,50 @@ const SpecialtyStoryGrid = () => {
   );
 };
 
-const SportsStoriesContainer = styled.div`
-  overflow: auto;
-`;
-
 const Wrapper = styled.div`
   display: grid;
   gap: 48px;
-  grid-template-areas:
-    "markets"
-    "sports";
-  @media ${QUERIES.desktopAndUp} {
-    grid-template-areas: "markets sports";
-    grid-template-columns: 1fr 1fr;
+
+  @media ${QUERIES.tabletAndUp} {
+    gap: 64px;
+    grid-template-columns: minmax(0px, auto);
+  }
+  @media ${QUERIES.laptopAndUp} {
     gap: 0px;
+    grid-template-columns: 1fr minmax(0px, 1fr);
   }
 `;
 
 const MarketsSection = styled.section`
-  grid-area: markets;
-  @media ${QUERIES.desktopAndUp} {
+  @media ${QUERIES.laptopAndUp} {
     padding-right: 16px;
     border-right: solid 1px ${COLORS.gray[300]};
+    margin-right: 16px;
   }
 `;
 
 const MarketCards = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(184px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(165px, 100%), 1fr));
   gap: 16px;
 `;
 
-const SportsSection = styled.section`
-  grid-area: sports;
-  display: grid;
-  gap: 16px;
-  grid-template-rows: 32x 1fr;
-  @media ${QUERIES.desktopAndUp} {
-    margin-left: 16px;
+const SportsStoriesContainer = styled.div`
+  @media ${QUERIES.tabletAndUp} {
+    min-width: 220px;
   }
 `;
 
+const SportsSection = styled.section``;
+
 const SportsStories = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(184px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(165px, 100%), 1fr));
   gap: 16px;
   @media ${QUERIES.tabletAndUp} {
     display: flex;
+    grid-template-columns: revert;
+    overflow: auto;
   }
 `;
 
